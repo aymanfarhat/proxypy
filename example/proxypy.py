@@ -28,9 +28,10 @@ def get(qstring):
     reply = {}
     reply["headers"] = {}
     reply["status"] = {}
-    reply["status"]["url"] = args["url"]
 
     if "url" in args and _validateUrl(args["url"]):
+        reply["status"]["url"] = args["url"]
+
         if not args["url"].startswith("http://"):
             args["url"] = "http://"+args["url"] 
         

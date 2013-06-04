@@ -1,0 +1,7 @@
+Flask==0.9
+Jinja2==2.7
+MarkupSafe==0.18
+Werkzeug==0.8.3
+argparse==1.2.1
+gunicorn==0.17.4
+wsgiref==0.1.2

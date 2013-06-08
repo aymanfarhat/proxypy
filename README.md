@@ -23,10 +23,9 @@ var request = $.ajax({
     url: "http://yourwebapp.domain/crossdomain",
     data: {url:"remotecontent.com/file.html", headers: true},
 })
-
+```
 Full URL: `http://yourwebapp.domain/crossdomain?url=remotecontent.com/file.html&headers=true`
 
-```
 #####Reply
 ```javascript
 {

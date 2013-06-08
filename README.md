@@ -1,8 +1,8 @@
-###Proxypy: Get external HTML, JSON or any other text file
+##Proxypy: Get external HTML, JSON or any other text file
 
 Simple Python proxy module for fetching content of remote webpages on the client without cross-domain limitations. Works with any Python web framework, here is an [example with Flask](https://github.com/aymanfarhat/proxypy/tree/master/example) and you can see it in action [here](http://proxypy.herokuapp.com)
 
-####Usage
+###Usage
 Include the [Proxypy](https://github.com/aymanfarhat/proxypy/blob/master/proxypy.py) module in your app path
 
 #####Flask View 
@@ -16,9 +16,17 @@ def crossdom():
     reply = proxypy.get(request.query_string)
         return Response(reply,status=200,mimetype='application/json')
 ```
-#####Javascript GET Request URL 
-`http://yourwebapp.domain/crossdom?url=remotecontent.com/file.html&headers=true`
+#####Javascript GET Request 
+```javascript
+var request = $.ajax({
+    type: 'GET',
+    url: "http://yourwebapp.domain/crossdomain",
+    data: {url:"remotecontent.com/file.html", headers: true},
+})
 
+Full URL: `http://yourwebapp.domain/crossdomain?url=remotecontent.com/file.html&headers=true`
+
+```
 #####Reply
 ```javascript
 {

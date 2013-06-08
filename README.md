@@ -35,7 +35,7 @@ def crossdom():
         "date": "Sat, 08 Jun 2013 08:41:05 GMT",
         "server": "Apache"
     },
-    "content": "<p>some html</p> 
+    "content": "<p>some html</p>"
 } 
 ```
 

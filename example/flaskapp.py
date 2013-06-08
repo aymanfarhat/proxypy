@@ -1,5 +1,8 @@
 from flask import Flask, request, Response, render_template
 import json
+import sys
+
+sys.path.append("..")
 import proxypy
 
 app = Flask(__name__)

@@ -53,5 +53,9 @@ def get(qstring):
         reply["content"] = None
         reply["status"]["http_code"] = 400
         reply["status"]["reason"] = "The url parameter value is missing or invalid"
+   
+    # Attach callback to reply if jsonp request
+    if "callback" in args:
+        return "{0}({1})".format(args["callback"], json.dumps(reply))
 
     return json.dumps(reply) 

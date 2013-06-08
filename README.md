@@ -14,7 +14,7 @@ import proxypy
 @app.route("/crossdomain")
 def crossdom():
     reply = proxypy.get(request.query_string)
-        return Response(reply,status=200,mimetype='application/json')
+    return Response(reply,status=200,mimetype='application/json')
 ```
 #####Javascript GET Request 
 ```javascript
